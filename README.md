@@ -2,12 +2,58 @@
 
 A minimal, production-minded microservice starter with clear folder structure, environment-driven config, health check, and testing via Jest + Supertest + MongoDB Memory Server.
 
+This is a public GitHub template repository. You can create new repositories from it via the GitHub UI or the CLI methods below.
+
 ## Use This as a GitHub Template
 
 1. On GitHub, click "Use this template" on this repo.
 2. Name your new repository and create it in your account/org.
 3. Clone your new repository locally.
 4. Follow the setup steps below.
+
+### Use This Structure via CLI
+
+You can scaffold a new project from this public template directly in your terminal. Replace `OWNER/REPO` with the actual GitHub `owner/repo` of this template, and choose your new project name.
+
+Using GitHub CLI (`gh`):
+
+```powershell
+# Authenticate (once)
+gh auth login
+
+# Create a new repo from this template (public or private)
+gh repo create <your-repo-name> --template OWNER/REPO --public
+# or: --private
+
+# Clone your new repo locally
+gh repo clone <your-username>/<your-repo-name>
+cd <your-repo-name>
+npm install
+```
+
+Using `degit` (copies files without git history):
+
+```powershell
+npx degit OWNER/REPO my-service
+cd my-service
+npm install
+```
+
+Using `git clone` + re-init (keeps files, resets history):
+
+```powershell
+git clone https://github.com/anuragbansall/microservice-template.git my-service
+cd my-service
+
+# Remove existing git history (PowerShell)
+Remove-Item -Recurse -Force .git
+
+# Re-initialize your repository
+git init
+git add .
+git commit -m "Init from microservice template"
+npm install
+```
 
 ## Prerequisites
 
